@@ -1,0 +1,7 @@
+# torch==2.5.0
+# torchvision==0.20.0
+diffusers==0.32.0
+decord
+sentencepiece
+av
+omegaconf
