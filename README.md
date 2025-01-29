@@ -44,10 +44,9 @@ CUDA_VISIBLE_DEVICES=0 python scripts/<model_name>/inference.py \
     --seed 42 \
     --log_latency
 ```
-> [!TIP]
-> You can edit the `configs/prompts.txt` or the `--text_prompt_file` option to change the text prompt.
-> The `log_latency` option is enabled to log the latency of DiTs.
-> See the `scripts/<model_name>/inference.py` for more detailed explanations of the arguments.
+> - You can edit the `configs/prompts.txt` or the `--text_prompt_file` option to change the text prompt.
+> - The `log_latency` option is enabled to log the latency of DiTs.
+> - See the `scripts/<model_name>/inference.py` for more detailed explanations of the arguments.
 
 
 Run the video DiTs with AsymRnR for acceleration:
@@ -64,14 +63,20 @@ CUDA_VISIBLE_DEVICES=0 python scripts/<model_name>/inference.py \
 +    --rnr_config_file configs/<reduction_configuration_file>.yaml \
     --log_latency
 ```
-> [!TIP]
-> The `enable_rnr` option is used to enable AsymRnR.
-> The `schedule_file` option is used to specify the schedule file which saves the similarity distribution of the baseline model. See the Section 3.4 in the paper for more details.
-> The `rnr_config_file` option is used to scale the acceleration. See the `configs` folder and the Appendix in the paper for more details.
+> - The `enable_rnr` option is used to enable AsymRnR.
+> - The `schedule_file` option is used to specify the schedule file which saves the similarity distribution of the baseline model. See the Section 3.4 in the paper for more details.
+> - The `rnr_config_file` option is used to scale the acceleration. See the `configs` folder and the Appendix in the paper for more details.
 
+
+## 🐛 Common Issues
+
+- **... square_dist is not available ...**
+    - Please make sure you have installed the optimized Euclidean distance operator by running `python -m pip install .` in the root directory of the repository.
+- **... libstdc++.so.6: version GLIBCXX_x.x.xx not found ..**
+    - This error is due to the incompatibility of the GCC version. The simplest solution is to `libstdcxx-ng` by `conda install -c conda-forge libstdcxx-ng`.
 
 ## 🚧 Todo
-- [ ] Add more visualization results
+- [x] *2025-01-26* Add more visualization results in the Supplementary Material
 - [x] *2025-01-23* Code released
 
 

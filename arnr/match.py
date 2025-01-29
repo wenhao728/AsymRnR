@@ -20,10 +20,12 @@ try:
 except ImportError:
     square_dist = None
     warning_message = (
-        "square_dist is not available. Please compile the extension following README.md. Otherwise, the pairwise"
+        "square_dist is not available. Please compile the extension following README.md/#Setup. Otherwise, the pairwise"
         " squared distance will be computed using torch.cdist, which includes redundant computation and may be slower.")
     print(warning_message)
     logger.warning(warning_message)
+    # Comment out the following line at your own risk
+    raise ImportError(warning_message)
 
 
 @torch.no_grad()
