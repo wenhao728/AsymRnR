@@ -72,6 +72,10 @@ CUDA_VISIBLE_DEVICES=0 python scripts/<model_name>/inference.py \
 
 - **... square_dist is not available ...**
     - Please make sure you have installed the optimized Euclidean distance operator by running `python -m pip install .` in the root directory of the repository.
+
+- **ImportError: libc10.so: cannot open shared object file: No such file or directory**
+    - `libc10.so` is made available by PyTorch. Please `import torch` before `import square_dist`.
+
 - **... libstdc++.so.6: version GLIBCXX_x.x.xx not found ..**
     - This error is due to the incompatibility of the GCC version. The simplest solution is to `libstdcxx-ng` by `conda install -c conda-forge libstdcxx-ng`.
 

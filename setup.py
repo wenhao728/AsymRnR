@@ -8,7 +8,7 @@ if __name__ == '__main__':
         ext_modules=[
             CppExtension(
                 name='square_dist', 
-                sources=['arnr/libs/square_dist.cpp']),
+                sources=['square_dist.cpp']),
         ],
         cmdclass={'build_ext': BuildExtension},
         version='0.0.1',
