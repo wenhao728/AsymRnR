@@ -2,8 +2,26 @@
   AsymRnR: Video Diffusion Transformers Acceleration with Asymmetric Reduction and Restoration
 </h1>
 
+
+<p align="center">
+<a href="https://arxiv.org/abs/2412.11706"><img  src="https://img.shields.io/badge/arXiv-Paper-B31B1B.svg"></a>
+<a href="https://opensource.org/license/mit/"><img  src="https://img.shields.io/badge/license-MIT-blue"></a>
+<img  alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wenhao728/AsymRnR?style=social"></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/wenhao728">Wenhao Sun</a>,
+<a>Rong-Cheng Tu</a>,
+<a>Jingyi Liao</a>,
+<a>Zhao Jin</a>,
+<a>Dacheng Tao</a>
+<br>
+<em>Nanyang Technological University</em>
+</p>
+
+
 > [!TIP]
-> **TL;DR** A training-free method to accelerate video DiTs without compromising output quality.
+> **ICML25'** A training-free method to accelerate video DiTs without compromising output quality.
 
 
 <!-- ## 🎨 (WIP) Gallery -->
@@ -80,9 +98,22 @@ CUDA_VISIBLE_DEVICES=0 python scripts/<model_name>/inference.py \
     - This error is due to the incompatibility of the GCC version. The simplest solution is to `libstdcxx-ng` by `conda install -c conda-forge libstdcxx-ng`.
 
 ## 🚧 Todo
+- [ ] Project page to introduce the method and results
 - [x] *2025-01-26* Add more visualization results in the Supplementary Material
 - [x] *2025-01-23* Code released
 
 
 ## :hearts: Shout-out
 Thanks to the authors of the following repositories for their great works and open-sourcing the code and models: [Diffusers](https://github.com/huggingface/diffusers), [CogVideoX](https://github.com/THUDM/CogVideo), [Mochi-1](https://github.com/genmoai/mochi), [HunyuanVideo](https://github.com/Tencent/HunyuanVideo), [FastVideo](https://github.com/hao-ai-lab/FastVideo)
+
+
+## 📄 Citation
+If you find our work useful, please consider citing our paper:
+```bibtex
+@article{sun2024asymrnr,
+  title={AsymRnR: Video Diffusion Transformers Acceleration with Asymmetric Reduction and Restoration},
+  author={Sun, Wenhao and Tu, Rong-Cheng and Liao, Jingyi and Jin, Zhao and Tao, Dacheng},
+  journal={arXiv preprint arXiv:2412.11706},
+  year={2024}
+}
+```
